@@ -3,17 +3,17 @@ import scrapy
 import os
 from pyvirtualdisplay import Display
 import time 
-from selenium import webdriver
+# from selenium import webdriver
 from scrapy.http import Request
-from selenium.webdriver.common.action_chains import ActionChains
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.keys import Keys
+# from selenium.webdriver.common.action_chains import ActionChains
+# from selenium.webdriver.common.by import By
+# from selenium.webdriver.support.ui import WebDriverWait
+# from selenium.webdriver.support import expected_conditions as EC
+# from selenium.webdriver.common.keys import Keys
 import re
-from selenium.common.exceptions import NoSuchElementException
-from selenium.common.exceptions import NoAlertPresentException
-from selenium.common.exceptions import ElementNotVisibleException
+# from selenium.common.exceptions import NoSuchElementException
+# from selenium.common.exceptions import NoAlertPresentException
+# from selenium.common.exceptions import ElementNotVisibleException
 from scrapy.selector import Selector
 from bs4 import BeautifulSoup
 sleep_time = 3
@@ -24,7 +24,7 @@ import csv
 import logging
 from scrapy.utils.log import configure_logging
 con = MySQLdb.connect(host ="localhost", user="root",passwd="root",db="Test",use_unicode=True,charset="utf8")
-from slugify import slugify
+# from slugify import slugify
 import usaddress
 import xml.etree.ElementTree as ET
 import requests
@@ -32,7 +32,7 @@ from scrapy.http import Request
 from Storelocator.items import StorelocatorItem
 from scrapy.linkextractors import LinkExtractor
 
-from scrapy_splash import SplashRequest
+# from scrapy_splash import SplashRequest
 import random 
 import time
 
@@ -311,7 +311,7 @@ class HundredBrand(scrapy.Spider):
 
 		elif "safeway.com" in response.url:
 			# try:
-				# time.sleep(random.randint(7, 17))
+				time.sleep(random.randint(7, 17))
 				BrandName = 'safeway'
 				StoreName  = 'safeway'
 				Full_Street = response.xpath('//meta[contains(@property,"street_address")]/@content').extract_first(default = "None").strip()
