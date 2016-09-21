@@ -1,0 +1,88 @@
+http://www.ikea.com/us/en/store/tempe
+>>>>>>>>>> [u'\n                ', u'\n2110 West IKEA Way', u'\nTempe, AZ 85284 \n\n\n', u'\n                ', u'\n\n\n', u'\n', u'\n']
+http://www.ikea.com/us/en/store/covina
+>>>>>>>>>> [u'\n                ', u'\n848 South Barranca Avenue', u'\nCovina, CA 91723 \n\n', u'\n                ', u'\n\n\n']
+http://www.ikea.com/us/en/store/emeryville
+>>>>>>>>>> [u'\n                ', u'\n4400 Shellmound St.', u'\nEmeryville, CA 94608 \n\n', u'\n                ', u'\nOn Sunday August 7, 14, 21, 28 and September 4 & 11', u'\nWe will be open until 9pm']
+http://www.ikea.com/us/en/store/west_sacramento
+>>>>>>>>>> [u'\n                ', u'\n700 IKEA Court', u'\nWest Sacramento, CA 95605\n\n', u'\n                \n', u'\n\n', u'\nIKEA West Sacramento is accessible via Yolobus Routes #40, 41, and 240.  Learn more on how to ride the Yolobus to IKEA West Sacramento at www.yolobus.com.\n\n\n\n']
+http://www.ikea.com/us/en/store/east_palo_alto
+>>>>>>>>>> [u'\n                ', u'\n1700 E. Bayshore Rd.', u'\nEast Palo Alto, CA 94303\n', u'\n                ', u'\n\u2022 Bus stops located just off the street level parking garage.', u'\n\u2022 Samtrans regular service. Use routes 280 and 296.']
+http://www.ikea.com/us/en/store/centennial
+>>>>>>>>>> [u'\n                ', u'\n9800 E. IKEA Way ', u'\nCentennial, Colorado 80112', u'\n                ', u'\n\n\n\n', u'\n', u'\n\n']
+http://www.ikea.com/us/en/store/sunrise
+>>>>>>>>>> [u'\n                ', u'\n151 NW 136 Avenue', u'\nSunrise, FL 33325 ', u'\n                ', u'\n', u'\n']
+http://www.ikea.com/us/en/store/orlando
+>>>>>>>>>> [u'\n                ', u'\nMonday - Sunday:', u' 10:00am - 9:00pm', u'\n                Address:', u'\n', u'\n\n', u' \n']
+http://www.ikea.com/us/en/store/costa_mesa
+>>>>>>>>>> [u'\n                ', u'\n1475 South Coast Dr.', u'\nCosta Mesa, CA 92626', u'\n                ', u'\n\n\n\n', u'\n']
+http://www.ikea.com/us/en/store/burbank
+>>>>>>>>>> [u'\n                ', u'\n600 N. San Fernando Blvd.', u'\nBurbank, CA 91502 \n\n\n', u'\n                ', u'\n\n\n', u'\n']
+http://www.ikea.com/us/en/store/atlanta
+>>>>>>>>>> [u'\n                \n', u'\nIKEA in Atlantic Station  ', u'\n441 16th Street, NW  ', u'\n                ', u'\n', u'\n']
+http://www.ikea.com/us/en/store/miami
+>>>>>>>>>> [u'\n                ', u'\n1801 NW 117th Avenue', u'\nSweetwater, FL 33172', u'\n                \n', u'\n\n', u'\n\n', u'\n\n']
+http://www.ikea.com/us/en/store/schaumburg
+>>>>>>>>>> [u'\n                ', u'\n1800 E. McConnor Parkway', u'\nSchaumburg, IL 60173', u'\n                ', u'\n\n\n', u'\n\n']
+http://www.ikea.com/us/en/store/tampa
+>>>>>>>>>> [u'\n                ', u'  ', u'\n1103 N. 22nd Street  ', u'\nTampa, FL 33605 \n\n', u'\n                Easiest points of entry are via ', u' and/or the ', u'\n\n', u'\n']
+http://www.ikea.com/us/en/store/baltimore
+>>>>>>>>>> [u'\n                ', u'  ', u'\n8352 Honeygo Blvd', u'\nBaltimore, MD 21236\n\n', u'\n                \n\n', u'\n\n']
+http://www.ikea.com/us/en/store/merriam
+>>>>>>>>>> [u'\n                ', u'\n6000 IKEA Way', u'\nMerriam, KS 66202', u'\n                ', u'\n\n\n', u'\n', u'\n\n']
+http://www.ikea.com/us/en/store/canton
+>>>>>>>>>> [u'\n                ', u'\n41640 Ford Road', u'\nCanton, MI 48187\n\n\n', u'\n                ', u'\n\n']
+http://www.ikea.com/us/en/store/st_louis
+>>>>>>>>>> []
+http://www.ikea.com/us/en/store/twin_cities
+>>>>>>>>>> [u'\n                ', u'\n8000 IKEA Way', u'\nBloomington, MN 55425\n\n', u'\n                \n', u'\n\n', u'\n\n\n']
+http://www.ikea.com/us/en/store/stoughton
+>>>>>>>>>> [u'\n                ', u'\n1 IKEA Way ', u'\nStoughton, MA 02072 \n\n', u'\n                 ', u'\n', u'IKEA Stoughton is conveniently located just off Route 24 and is only 20 minutes from downtown Boston.\n']
+http://www.ikea.com/us/en/store/elizabeth
+>>>>>>>>>> [u'\n                ', u'\n1000 IKEA Drive', u'\nElizabeth, NJ 07201\n\n', u'\n                ', u'\n', u'\n']
+http://www.ikea.com/us/en/store/las_vegas
+>>>>>>>>>> []
+http://www.ikea.com/us/en/store/charlotte
+>>>>>>>>>> [u'\n                ', u'\n8300 IKEA Boulevard', u'\nCharlotte, NC 28262\n\n', u'\n                ', u'\n\n\n', u'\n', u'\n\n']
+http://www.ikea.com/us/en/store/paramus
+>>>>>>>>>> [u'\n                ', u'  ', u'\n100 IKEA Dr. ', u'\nParamus, NJ 07652\n', u'\n                ', u'\n\n', u'\n\u2022Conveniently located at the intersection of Routes 4 & 17.  ']
+http://www.ikea.com/us/en/store/brooklyn
+>>>>>>>>>> [u'\n                ', u' ', u'\n1 Beard Street', u'\nBrooklyn, NY 11231\n', u'\n                ']
+http://www.ikea.com/us/en/store/columbus
+>>>>>>>>>> []
+http://www.ikea.com/us/en/store/long_island
+>>>>>>>>>> [u'\n                ', u'\n1100 Broadway Mall', u'\nHicksville NY, 11801\n\n', u'\n                ', u'\n', u'\n', u' Take the LIRR from Penn Station (or any other local station) and take either the Port Jefferson Branch or Ronkonkoma Branch to the Hicksville station. IKEA is located 3 blocks north of the station on Route 107 (Hicksville Road) which is .87 miles. You can either walk to the store or take the N20 bus north to a stop that is directly across the street from our store.\n']
+http://www.ikea.com/us/en/store/conshohocken
+>>>>>>>>>> [u'\n                ', u' ', u'\n400 Alan Wood Road ', u'Conshohocken, PA 19428 ', u'\n                \n', u'\n\n', u'\n\n\n\n\n', u'   ']
+http://www.ikea.com/us/en/store/west_chester
+>>>>>>>>>> [u'\n                ', u'\n9500 IKEA Way', u'\nWest Chester, OH 45069\n\n', u'\n                \n', u'\n\n', u'\n', u'\n\n']
+http://www.ikea.com/us/en/store/portland
+>>>>>>>>>> [u'\n            ', u'\n            ', u'\n        ', u'\n            ', u'\n            ', u'\n        ']
+http://www.ikea.com/us/en/store/memphis
+>>>>>>>>>> []
+http://www.ikea.com/us/en/store/new_haven
+>>>>>>>>>> [u'\n                ', u'\n450 Sargent Drive', u'\nNew Haven, CT 06511', u'\n                ', u'\nSunday through Saturday:10am-8pm', u'\n\n\n\n\n', u'\n\n']
+http://www.ikea.com/us/en/store/san_diego
+>>>>>>>>>> [u'\n                ', u'\n2149 Fenton Parkway', u'\nSan Diego, CA 92108\n\n', u'\n                ', u'\n\n', u'\n\n', u' ']
+http://www.ikea.com/us/en/store/pittsburgh
+>>>>>>>>>> [u'\n                ', u'\n 2001 Park Manor Blvd.', u' \n Robinson Town Centre ', u'\n                ', u'\n\u2022 Visa', u'\n\u2022 MasterCard']
+http://www.ikea.com/us/en/store/frisco
+>>>>>>>>>> [u'\n                ', u'\n7171 IKEA Drive', u'\nFrisco, TX 75034\n\n', u'\n                ', u'\n', u'\n\n']
+http://www.ikea.com/us/en/store/round_rock
+>>>>>>>>>> [u'\n                ', u'\n1 IKEA Way ', u'\nRound Rock, TX 78665\n\n', u'\n                ', u'\n\n']
+http://www.ikea.com/us/en/store/seattle
+>>>>>>>>>> [u'\n                ', u'  ', u'\n601 SW 41st St.   ', u'\nRenton, WA 98057 \n\n', u'\n                ', u'\n\n', u'\n']
+http://www.ikea.com/us/en/store/philadelphia
+>>>>>>>>>> [u'\n                ', u' ', u'\n2206 S. Columbus Blvd. ', u'\nPhiladelphia, PA 19148\n', u'\n                ', u'\n', u'\n', u'\n', u'\n', u'\n']
+http://www.ikea.com/us/en/store/houston
+>>>>>>>>>> [u'\n                7810 Katy Freeway', u'\nHouston, TX  77024\n\n\n', u'\n                ', u'\n\n\n\n\n', u'\n\n\n', u'\n']
+http://www.ikea.com/us/en/store/draper
+>>>>>>>>>> [u'\n                ', u'\n67 West IKEA Way', u'\nDraper, UT 84020', u'\n                ', u'\n', u'\n\n']
+http://www.ikea.com/us/en/store/woodbridge
+>>>>>>>>>> [u'\n                ', u'\n2901 Potomac Mills Circle', u'\nWoodbridge, VA 22192\n\n', u'\n                \n', u'\n', u'\n\n\n\n']
+http://www.ikea.com/us/en/store/bolingbrook
+>>>>>>>>>> [u'\n                ', u'\n750 E. Boughton Road', u'\nBolingbrook, IL 60440\n\n', u'\n                ', u'\n', u'\n\n']
+http://www.ikea.com/us/en/store/carson
+>>>>>>>>>> [u'\n                ', u'\n20700 Avalon Blvd.', u'\nCarson, CA 90746', u'\n                ', u'\n']
+http://www.ikea.com/us/en/store/college_park
+>>>>>>>>>> [u'\n                \n\nMonday - Saturday:', u'10:00am - 9:00pm ', u'\nSunday: 10:00am - 8:00pm ', u'\n                ', u'  ', u'\n10100 Baltimore Ave  ', u'\nCollege Park, MD 20740 \n\n']

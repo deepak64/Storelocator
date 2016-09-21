@@ -1,0 +1,1 @@
+Purchase Amount: [u'\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t52 Rte 17 K\n\t\t\t\t\t\t\t\t\t\t']
