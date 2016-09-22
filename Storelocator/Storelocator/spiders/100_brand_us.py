@@ -39,13 +39,14 @@ import time
 class HundredBrand(scrapy.Spider):
 	name = 'hundred'
 
-	start_urls =["http://www.homedepot.com/StoreFinder/storeDirectory",
-	#"http://www.bk.com/restaurants/sitemap.html",
+	start_urls =[#"http://www.homedepot.com/StoreFinder/storeDirectory",
+	# "http://www.bk.com/restaurants/sitemap.html",
 	# "https://www.ihg.com/holidayinnexpress/destinations/us/en/united-states-hotels",
 	# "https://locations.wendys.com/",
 	# "http://local.safeway.com/",
-	# "http://franchise.7-eleven.com/franchise/available-store-locations"	
-	]
+	# "http://franchise.7-eleven.com/franchise/available-store-locations",
+	"https://www.24hourfitness.com/ClubInformation/rest/v1/Gyms"
+	]	]
 	def parse(self, response):
 		
 		if "homedepot" in response.url:
@@ -81,11 +82,13 @@ class HundredBrand(scrapy.Spider):
 				link = 'http://franchise.7-eleven.com' + link
 				yield Request(url = link, callback = self.pagination)
 
+
+
 		else:
 			yield Request(url = response.url, callback = self.pagination)
 
 	def pagination(self, response):
-		time.sleep(random.randint(2,5))
+		# time.sleep(random.randint(2,5))
 		print "response_pagination",response.url
 
 		if "homedepot" in response.url:
@@ -405,6 +408,44 @@ class HundredBrand(scrapy.Spider):
 				Failed_url_list.append(response.url)
 				text_file.write("Failed Url: %s" % Failed_url_list)
 				text_file.close()
+
+
+
+		elif "24hourfitness" in response.url:
+
+			data = json.loads(response.body_as_unicode())
+			for i in range(len(data['groupClubs'])):
+				for key in range(len(data['groupClubs'][i]['clubs'])):
+					StoreName = data['groupClubs'][i]['clubs'][key]['clubName']
+					Full_Street = data['groupClubs'][i]['clubs'][key]['clubAddressStreet']
+					City = data['groupClubs'][i]['clubs'][key]['clubAddressCity']
+					State = data['groupClubs'][i]['clubs'][key]['clubAddressState']
+					Zipcode = data['groupClubs'][i]['clubs'][key]['clubAddressZip']
+					Latitude = data['groupClubs'][i]['clubs'][key]['clubAddressLatitude']
+					Longitude = data['groupClubs'][i]['clubs'][key]['clubAddressLongitude']
+					PhoneNumber = data['groupClubs'][i]['clubs'][key]['clubPhoneNumber']
+					BrandID = "None"
+					BrandName = '24hourfitness'
+
+					RawAddress = Full_Street + City + Zipcode + State
+					Country ='us'
+
+					DataSource = BrandName
+					Category = None
+
+					key_list = ["BrandName", "StoreName", "RawAddress", "Full_Street", "City", "State", "Zipcode", "PhoneNumber", "BrandID", "Longitude", "Latitude", "Category", "DataSource", "Country"]
+					item_dict = {}
+					for key in key_list:
+						# print key
+						item_dict[key] = locals()[key]
+						
+					print item_dict
+					item['rows'] = item_dict
+					yield item
+
+					
+
+
 
 
 
