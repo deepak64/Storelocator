@@ -40,11 +40,11 @@ class HundredBrand(scrapy.Spider):
 	name = 'hundred'
 
 	start_urls =["http://www.homedepot.com/StoreFinder/storeDirectory",
-	"http://www.bk.com/restaurants/sitemap.html",
+	#"http://www.bk.com/restaurants/sitemap.html",
 	# "https://www.ihg.com/holidayinnexpress/destinations/us/en/united-states-hotels",
 	# "https://locations.wendys.com/",
 	# "http://local.safeway.com/",
-	"http://franchise.7-eleven.com/franchise/available-store-locations"	
+	# "http://franchise.7-eleven.com/franchise/available-store-locations"	
 	]
 	def parse(self, response):
 		
@@ -360,45 +360,52 @@ class HundredBrand(scrapy.Spider):
 
 		elif '7-eleven.com/' in response.url:
 			time.sleep(random.randint(3,7))
+			try:
+				parent = response.xpath('//*[@id="stores_listing"]/div/div[4]/div/div/div/table/tr[position()>1]')
+				for par in parent:
+					StoreName ="Store #" +"".join(par.xpath('td[2]/a/text()').extract())
+					print StoreName	
 
-			parent = response.xpath('//*[@id="stores_listing"]/div/div[4]/div/div/div/table/tr[position()>1]')
-			for par in parent:
-				StoreName ="Store #" +"".join(par.xpath('td[2]/a/text()').extract())
-				print StoreName	
-
-				Full_Street = "".join(par.xpath('td[5]/text()').extract())
-				
-				City = "".join(par.xpath('td[6]/text()').extract())
-				State =  "".join(par.xpath('td[7]/text()').extract())
-				Zipcode =  "".join(par.xpath('td[8]/text()').extract())
-				PhoneNumber =  "".join(par.xpath('td[10]/a/text()').extract())
-				
-				BrandID = "None"
-				BrandName = '7eleven'
-
-
-				# print "StoreName",StoreName
-				# print "Full_Street>",Full_Street
-				# print "City ",City
-				# print "State>>",State
-				# print "Zipcode",Zipcode
-				# print "phone",phone
-				RawAddress = Full_Street + City + Zipcode + State
-				Country ='us'
-				Latitude = None
-				Longitude = None
-
-				DataSource = BrandName
-				Category = None
-
-				key_list = ["BrandName", "StoreName", "RawAddress", "Full_Street", "City", "State", "Zipcode", "PhoneNumber", "BrandID", "Longitude", "Latitude", "Category", "DataSource", "Country"]
-				item_dict = {}
-				for key in key_list:
-					# print key
-					item_dict[key] = locals()[key]
+					Full_Street = "".join(par.xpath('td[5]/text()').extract())
 					
-				item['rows'] = item_dict
-				yield item
+					City = "".join(par.xpath('td[6]/text()').extract())
+					State =  "".join(par.xpath('td[7]/text()').extract())
+					Zipcode =  "".join(par.xpath('td[8]/text()').extract())
+					PhoneNumber =  "".join(par.xpath('td[10]/a/text()').extract())
+					
+					BrandID = "None"
+					BrandName = '7eleven'
+
+
+					# print "StoreName",StoreName
+					# print "Full_Street>",Full_Street
+					# print "City ",City
+					# print "State>>",State
+					# print "Zipcode",Zipcode
+					# print "phone",phone
+					RawAddress = Full_Street + City + Zipcode + State
+					Country ='us'
+					Latitude = None
+					Longitude = None
+
+					DataSource = BrandName
+					Category = None
+
+					key_list = ["BrandName", "StoreName", "RawAddress", "Full_Street", "City", "State", "Zipcode", "PhoneNumber", "BrandID", "Longitude", "Latitude", "Category", "DataSource", "Country"]
+					item_dict = {}
+					for key in key_list:
+						# print key
+						item_dict[key] = locals()[key]
+						
+					item['rows'] = item_dict
+					yield item
+			except:
+				text_file = open("7eleven.txt", "w")
+				Failed_url_list =[]
+				Failed_url_list.append(response.url)
+				text_file.write("Failed Url: %s" % Failed_url_list)
+				text_file.close()
+
 
 
 
