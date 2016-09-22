@@ -20,6 +20,7 @@ ITEM_PIPELINES ={'Storelocator.pipelines.StorelocatorPipeline':400}
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
+DUPEFILTER_CLASS = 'scrapy.dupefilter.BaseDupeFilter'
 # SPLASH_URL = 'http://192.168.59.103:8050'
 # DOWNLOADER_MIDDLEWARES = {
 #     'scrapy_splash.SplashCookiesMiddleware': 723,

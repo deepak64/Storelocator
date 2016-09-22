@@ -39,29 +39,24 @@ import time
 class HundredBrand(scrapy.Spider):
 	name = 'hundred'
 
-	start_urls =[#"http://www.homedepot.com/StoreFinder/storeDirectory",
-	# "http://www.bk.com/restaurants/sitemap.html",
-	# "http://www.bk.com/restaurants/al/alabaster/681-1st-street-south-west-10327.html",
+	start_urls =["http://www.homedepot.com/StoreFinder/storeDirectory",
+	"http://www.bk.com/restaurants/sitemap.html",
 	# "https://www.ihg.com/holidayinnexpress/destinations/us/en/united-states-hotels",
 	# "https://locations.wendys.com/",
-	"http://local.safeway.com/"	
+	# "http://local.safeway.com/"	
 	]
 	def parse(self, response):
 		
 		if "homedepot" in response.url:
 			links = response.xpath('//li[@class="stateList__item"]/a/@href').extract()
-			time.sleep(random.randint(7, 11))
 			for link in links:
 				link = 'http://www.homedepot.com'+ link
 				yield Request(url = link, callback = self.pagination)
-				time.sleep(random.randint(7, 11))
 
 		elif "bk.com/" in response.url:
 			links = response.xpath('//ul[@class="store-list"]/li/a/@href').extract()
-			time.sleep(random.randint(7, 11))
 			for link in links:
 				link = 'http://www.bk.com'+ link
-				time.sleep(random.randint(7, 11))
 				yield Request(url = link, callback = self.pagination)
 		elif "ihg.com" in response.url:
 			links = response.xpath('//li[@class="listingItem"]/a/@href').extract()
@@ -84,7 +79,8 @@ class HundredBrand(scrapy.Spider):
 			yield Request(url = response.url, callback = self.pagination)
 
 	def pagination(self, response):
-		print "response>>>", response.url
+		time.sleep(random.randint(2,4))
+		print "response_pagination",response.url
 
 		if "homedepot" in response.url:
 
@@ -101,7 +97,7 @@ class HundredBrand(scrapy.Spider):
 
 		elif "wendys.com" in response.url:
 			links = response.xpath('//h2[text()="Browse by City"]/following-sibling::div/ul/li/a/@href').extract()
-			for link in links:
+			for link in links:	
 				link = 'https://locations.wendys.com'+ link
 				yield Request(url = link, callback = self.parse_next)
 		elif 'safeway' in response.url:
@@ -111,11 +107,14 @@ class HundredBrand(scrapy.Spider):
 
 
 		else:
+			print "hellllllllllllllllooooooooooooooooooooooooooooooo"
 			yield Request(url = response.url, callback = self.parse_next)
 
 
 
 	def parse_next(self, response):
+		time.sleep(random.randint(2,4))
+		print "response>>>next", response.url
 		
 		if "wendys.com" in response.url:
 			links = response.xpath('//a[@itemprop="address"]/@href').extract()
@@ -134,6 +133,7 @@ class HundredBrand(scrapy.Spider):
 
 
 	def parse_details(self, response):
+		print "details>>>>>>>>>>urlssssssssssssss.", response.url
 		item = StorelocatorItem()
 
 # 		Category = None
@@ -220,8 +220,8 @@ class HundredBrand(scrapy.Spider):
 
 		elif 'bk.com/' in response.url:
 
-			try:
-				
+			# try:
+				time.sleep(random.randint(3,9))
 				StoreName  = "".join(response.xpath('//div[@itemprop="name"]/text()').extract()).strip()
 				Full_Street = "".join(response.xpath('//span[@itemprop="streetAddress"]/text()').extract()).strip()
 				
@@ -262,10 +262,10 @@ class HundredBrand(scrapy.Spider):
 					
 				item['rows'] = item_dict
 				yield item
-			except:
-				text_file = open("burger_king.txt", "w")
-				text_file.write("Failed Url: %s" % response.url)
-				text_file.close()
+			# except:
+				# text_file = open("burger_king.txt", "w")
+				# text_file.write("Failed Url: %s" % response.url)
+				# text_file.close()
 
 		elif "wendys.com" in response.url:
 			try:
