@@ -46,7 +46,7 @@ class HundredBrand(scrapy.Spider):
 	# "http://local.safeway.com/",
 	# "http://franchise.7-eleven.com/franchise/available-store-locations",
 	"https://www.24hourfitness.com/ClubInformation/rest/v1/Gyms"
-	]	]
+	]
 	def parse(self, response):
 		
 		if "homedepot" in response.url:
@@ -416,6 +416,7 @@ class HundredBrand(scrapy.Spider):
 			data = json.loads(response.body_as_unicode())
 			for i in range(len(data['groupClubs'])):
 				for key in range(len(data['groupClubs'][i]['clubs'])):
+					time.sleep(random.randint(2,7))
 					StoreName = data['groupClubs'][i]['clubs'][key]['clubName']
 					Full_Street = data['groupClubs'][i]['clubs'][key]['clubAddressStreet']
 					City = data['groupClubs'][i]['clubs'][key]['clubAddressCity']
