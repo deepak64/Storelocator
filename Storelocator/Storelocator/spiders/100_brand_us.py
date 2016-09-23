@@ -45,8 +45,10 @@ class HundredBrand(scrapy.Spider):
 	# "https://locations.wendys.com/",
 	# "http://local.safeway.com/",
 	# "http://franchise.7-eleven.com/franchise/available-store-locations",
-	"https://www.24hourfitness.com/ClubInformation/rest/v1/Gyms"
-	]	]
+	# "https://www.24hourfitness.com/ClubInformation/rest/v1/Gyms",
+	# "https://www.meijer.com/content/content.jsp?pageName=gas",
+	"https://www.ihg.com/brands-sitemap-index.xml"
+	]	
 	def parse(self, response):
 		
 		if "homedepot" in response.url:
@@ -61,8 +63,7 @@ class HundredBrand(scrapy.Spider):
 				link = 'http://www.bk.com'+ link
 				yield Request(url = link, callback = self.pagination)
 		elif "ihg.com" in response.url:
-			links = response.xpath('//li[@class="listingItem"]/a/@href').extract()
-			time.sleep(random.randint(7, 11))
+			links = re.findall(r'<loc>(.*)</loc>', response.body)[2:6]
 			for link in links:
 				yield Request(url = link, callback = self.pagination)
 
@@ -99,10 +100,14 @@ class HundredBrand(scrapy.Spider):
 				link = 'http://www.homedepot.com'+ link
 				yield Request(url = link, callback = self.parse_next)
 		elif "ihg.com" in response.url:
-			links = response.xpath('//li[@class="listingItem"]/a/@href').extract()
-			time.sleep(random.randint(7, 11))
+			links = re.findall(r'<loc>(.*)</loc>', response.body)
 			for link in links:
-				yield Request(url = link, callback = self.parse_next)
+				if "/us/en/" in link:
+					yield Request(url = link, callback = self.parse_next)
+			# links = response.xpath('//li[@class="listingItem"]/a/@href').extract()
+			# time.sleep(random.randint(7, 11))
+			# for link in links:
+			# 	yield Request(url = link, callback = self.parse_next)
 
 		elif "wendys.com" in response.url:
 			links = response.xpath('//h2[text()="Browse by City"]/following-sibling::div/ul/li/a/@href').extract()
@@ -122,7 +127,7 @@ class HundredBrand(scrapy.Spider):
 
 
 	def parse_next(self, response):
-		time.sleep(random.randint(2,5))
+		# time.sleep(random.randint(2,5))
 		print "response>>>next", response.url
 		
 		if "wendys.com" in response.url:
@@ -362,8 +367,8 @@ class HundredBrand(scrapy.Spider):
 				# text_file.close()
 
 		elif '7-eleven.com/' in response.url:
-			time.sleep(random.randint(3,7))
 			try:
+				time.sleep(random.randint(3,7))
 				parent = response.xpath('//*[@id="stores_listing"]/div/div[4]/div/div/div/table/tr[position()>1]')
 				for par in parent:
 					StoreName ="Store #" +"".join(par.xpath('td[2]/a/text()').extract())
@@ -442,6 +447,94 @@ class HundredBrand(scrapy.Spider):
 					print item_dict
 					item['rows'] = item_dict
 					yield item
+
+		elif 'meijer.com' in response.url:
+			# time.sleep(random.randint(3,7))
+			try:
+				parent = response.xpath('//*[@id="gasStationList"]/tr[position()>1]')
+				for par in parent:
+					StoreName ="".join(par.xpath('td[1]/text()').extract())
+					print StoreName	
+
+					Full_Street = "".join(par.xpath('td[2]/text()').extract())
+					
+					City = "".join(par.xpath('td[3]/text()').extract())
+					State =  "".join(par.xpath('td[4]/text()').extract())
+					Zipcode =  "".join(par.xpath('td[5]/text()').extract())
+					PhoneNumber =  "None"
+					
+					BrandID = "None"
+					BrandName = 'meijer'
+
+					RawAddress = Full_Street + City + Zipcode + State
+					Country ='us'
+					Latitude = None
+					Longitude = None
+
+					DataSource = BrandName
+					Category = None
+
+					key_list = ["BrandName", "StoreName", "RawAddress", "Full_Street", "City", "State", "Zipcode", "PhoneNumber", "BrandID", "Longitude", "Latitude", "Category", "DataSource", "Country"]
+					item_dict = {}
+					for key in key_list:
+						# print key
+						item_dict[key] = locals()[key]
+						
+					item['rows'] = item_dict
+					yield item
+			except:
+				text_file = open("7eleven.txt", "w")
+				Failed_url_list =[]
+				Failed_url_list.append(response.url)
+				text_file.write("Failed Url: %s" % Failed_url_list)
+				text_file.close()
+
+		elif "ihg.com/" in response.url:
+			try:
+				time.sleep(random.randint(7, 17))
+				BrandName = response.url.split('/')[3]
+				StoreName  = response.xpath('//span[@itemprop="name"]/text()').extract_first(default='None').strip()
+				Full_Street = response.xpath('//span[@itemprop="streetAddress"]/p/text()').extract_first(default = "None").strip()
+				
+				City = response.xpath('//span[@itemprop="addressLocality"]/text()').extract_first(default = "None").strip()
+				State =  response.xpath('//span[@itemprop="addressRegion"]/text()').extract_first(default = "None").strip().replace(', ','')
+				Zipcode =  response.xpath('//span[@itemprop="postalCode"]/text()').extract_first(default = "None").strip()
+				PhoneNumber =  response.xpath('//span[@itemprop="telephone"]/text()').extract_first(default = "None").strip()
+				
+				BrandID = "None"
+				
+
+
+				# print "StoreName",StoreName
+				# print "Full_Street>",Full_Street
+				# print "City ",City
+				# print "State>>",State
+				# print "Zipcode",Zipcode
+				# print "phone",phone
+				RawAddress = Full_Street + City + Zipcode + State
+				Country ='us'
+				Latitude =  response.xpath('//span[@itemprop="geo"]/meta[contains(@itemprop,"latitude")]/@content').extract_first(default = "None").strip()
+				Longitude = response.xpath('//span[@itemprop="geo"]/meta[contains(@itemprop,"longitude")]/@content').extract_first(default = "None").strip()
+
+				DataSource = BrandName
+				Category = None
+
+				key_list = ["BrandName", "StoreName", "RawAddress", "Full_Street", "City", "State", "Zipcode", "PhoneNumber", "BrandID", "Longitude", "Latitude", "Category", "DataSource", "Country"]
+				item_dict = {}
+				for key in key_list:
+					# print key
+					item_dict[key] = locals()[key]
+					
+				item['rows'] = item_dict
+				yield item
+			except:
+				text_file = open("holidayinn.txt", "w")
+				Failed_url_list =[]
+				Failed_url_list.append(response.url)
+				text_file.write("Failed Url: %s" % Failed_url_list)
+				text_file.close()
+
+
 
 					
 
