@@ -90,7 +90,7 @@ class HundredBrand(scrapy.Spider):
 			yield Request(url = response.url, callback = self.pagination)
 
 	def pagination(self, response):
-		# time.sleep(random.randint(2,5))
+		time.sleep(random.randint(2,5))
 		print "response_pagination",response.url
 
 		if "homedepot" in response.url:
@@ -128,7 +128,7 @@ class HundredBrand(scrapy.Spider):
 
 
 	def parse_next(self, response):
-		# time.sleep(random.randint(2,5))
+		time.sleep(random.randint(2,5))
 		print "response>>>next", response.url
 		
 		if "wendys.com" in response.url:
@@ -493,7 +493,7 @@ class HundredBrand(scrapy.Spider):
 
 		elif "ihg.com/" in response.url:
 			try:
-				time.sleep(random.randint(7, 17))
+				time.sleep(random.randint(2, 4))
 				BrandName = response.url.split('/')[3]
 				StoreName  = response.xpath('//span[@itemprop="name"]/text()').extract_first(default='None').strip()
 				Full_Street = response.xpath('//span[@itemprop="streetAddress"]/p/text()').extract_first(default = "None").strip()
