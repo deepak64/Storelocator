@@ -3,6 +3,8 @@ import requests
 import json
 import MySQLdb
 import datetime
+import time
+import random
 con = MySQLdb.connect(host ="localhost", user="root",passwd="root",db="Test", use_unicode=True,charset="utf8")
 states = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DC", "DE", "FL", "GA", 
           "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", 
@@ -14,18 +16,32 @@ states = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DC", "DE", "FL", "GA",
 for st in states:
 	url ="https://www.walmart.com/store/ajax/finder?location="+str(st)+"&is_search=true"
 	res = requests.get(url)
-	# print res
+	time.sleep(random.randint(2, 4))
 	soup = res.text.encode('utf-8')
 	data =json.loads(soup)
 	for i in range(len(data['stores'])):
+		time.sleep(random.randint(2, 5))
 		BrandName = data['stores'][i]['storeType']['displayName']
-		FullStreet = data['stores'][i]['address']['address1']
+		Full_Street = data['stores'][i]['address']['address1']
 		City = data['stores'][i]['address']['city']
 		State = data['stores'][i]['address']['state']
-		Zipcode = data['stores'][i]['address']['postalCode']
-		PhoneNumber = data['stores'][i]['phone']
-		Latitude = data['stores'][i]['geoPoint']['latitude']
-		Longitude = data['stores'][i]['geoPoint']['longitude']
+		try:
+			Zipcode = data['stores'][i]['address']['postalCode']
+		except:
+			Zipcode = "None"
+		try:
+			PhoneNumber = data['stores'][i]['phone']
+		except:
+			PhoneNumber = "None"
+		try:
+			Latitude = data['stores'][i]['geoPoint']['latitude']
+		except:
+			Latitude = "None"
+		try:
+			Longitude = data['stores'][i]['geoPoint']['longitude']
+		except:
+			Longitude = "None"
+
 		StoreName = City + " " + BrandName
 
 		BrandName = BrandName.replace("'","").replace(" ","")
