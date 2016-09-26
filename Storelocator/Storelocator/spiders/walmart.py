@@ -53,7 +53,7 @@ for st in states:
 		with con:
 			cur=con.cursor()
 			create_table = ('CREATE TABLE if NOT EXISTS ' + str(BrandName) +'  LIKE TestDB;')
-			print create_table
+			# print create_table
 			cur.execute(create_table)
 			con.commit()
 
