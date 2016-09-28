@@ -59,7 +59,8 @@ class HundredBrand(scrapy.Spider):
 	# "https://www.ihg.com/brands-sitemap-index.xml",
 	# "http://www3.hilton.com/en/hotel-locations/us/index.html",
 	# "http://www.albertsons.com/pd/stores/",
-	"http://www.wholefoodsmarket.com/stores/list/state"
+	# "http://www.wholefoodsmarket.com/stores/list/state",
+	"http://stores.petco.com/"
 	]
 	def parse(self, response):
 		
@@ -115,6 +116,11 @@ class HundredBrand(scrapy.Spider):
 				# print links
 				yield Request(url = links, callback = self.pagination)
 
+		elif "petco.com" in response.url:
+			links = response.xpath('//div[@class="rio-listItem"]/a/@href').extract()
+			for link in links:
+				yield Request(url = link, callback = self.pagination)
+
 		else:
 			yield Request(url = response.url, callback = self.pagination)
 
@@ -165,21 +171,15 @@ class HundredBrand(scrapy.Spider):
 
 
 		elif 'wholefoodsmarket.com' in response.url:
-			
-			# links = response.xpath('//span[@class="field-content"]/a/@href').extract()
-			# for link in links:
-			# 	link = "http://www.wholefoodsmarket.com" + link
-
-			# 	yield Request(url = link, callback = self.parse_next)
-
-			# links = response.xpath('//*[@id="block-views-store-locations-by-state-state"]/div/div/div[3]')
-			# for link in links:
-			# 	link =  "http://www.wholefoodsmarket.com" + "".join(link.xpath('div[3]/div[2]/span/a/@href').extract())
-			# 	yield Request(url = link, callback = self.parse_next)
 
 			links =response.xpath('//a[text()="Store info"]/@href').extract()
 			for link in links:
 				link = "http://www.wholefoodsmarket.com" + link
+				yield Request(url = link, callback = self.parse_next)
+
+		elif "petco.com" in response.url:
+			links = response.xpath('//div[@class="rio-listItem"]/a/@href').extract()
+			for link in links:
 				yield Request(url = link, callback = self.parse_next)
 				
 
@@ -212,7 +212,11 @@ class HundredBrand(scrapy.Spider):
 			for link in links:
 				link = 'http://www3.hilton.com' + link
 				yield Request(url = link, callback = self.parse_details)
-
+		elif "petco.com" in response.url:
+			links = response.xpath('//div[@class="rio-list-locName"]/a/@href').extract()
+			for link in links:
+				yield Request(url = link, callback = self.parse_details)
+				
 		else:
 			yield Request(url = response.url, callback = self.parse_details)
 
@@ -756,6 +760,53 @@ class HundredBrand(scrapy.Spider):
 				yield item
 			except:
 				text_file = open("wholefoodsmarket.txt", "w")
+				Failed_url_list =[]
+				Failed_url_list.append(response.url)
+				text_file.write("Failed Url: %s" % Failed_url_list)
+				text_file.close()
+
+		elif "petco.com" in response.url:
+			try:
+				time.sleep(random.randint(2, 12))
+				BrandName = 'Petco'
+				StoreName  = response.xpath('//div[@id="rio-locName"]/text()').extract_first(default='None').strip()
+				Full_Street = response.xpath('//div[@class="rio-addrText"]/span[1]/text()').extract_first(default = "None").strip()
+				
+				City = response.xpath('//div[@class="rio-addrText"]/span[2]/text()').extract_first(default = "None").strip()
+				State =  response.xpath('//div[@class="rio-addrText"]/span[3]/text()').extract_first(default = "None").strip().replace(', ','')
+				Zipcode =  response.xpath('//div[@class="rio-addrText"]/span[4]/text()').extract_first(default = "None").strip()
+				PhoneNumber =  response.xpath('//span[@class="rio-phoneText"]/text()').extract_first(default = "None").strip()
+				
+				BrandID = "None"
+				
+
+
+				# print "StoreName",StoreName
+				# print "Full_Street>",Full_Street
+				# print "City ",City
+				# print "State>>",State
+				# print "Zipcode",Zipcode
+				# print "phone",phone
+				RawAddress = Full_Street + City + Zipcode + State
+				Country ='us'
+				
+				Latitude =  "None"
+				Longitude = "None"
+				
+				DataSource = BrandName
+				Category = None
+
+				key_list = ["BrandName", "StoreName", "RawAddress", "Full_Street", "City", "State", "Zipcode", "PhoneNumber", "BrandID", "Longitude", "Latitude", "Category", "DataSource", "Country"]
+				item_dict = {}
+				for key in key_list:
+					# print key
+					item_dict[key] = locals()[key]
+				
+				print item_dict
+				item['rows'] = item_dict
+				yield item
+			except:
+				text_file = open("petco.txt", "w")
 				Failed_url_list =[]
 				Failed_url_list.append(response.url)
 				text_file.write("Failed Url: %s" % Failed_url_list)

@@ -1,0 +1,456 @@
+INFO: Starting new HTTPS connection (1): www.walmart.com
+WARNING: /home/deepak/Music/workspace/Storelocator/Storelocator/Storelocator/spiders/walmart.py:73: Warning: Table 'WalmartSupercenter' already exists
+  cur.execute(create_table)
+
+INFO: Scrapy 1.1.1 started (bot: Storelocator)
+INFO: Overridden settings: {'NEWSPIDER_MODULE': 'Storelocator.spiders', 'ROBOTSTXT_OBEY': True, 'DUPEFILTER_CLASS': 'scrapy.dupefilter.BaseDupeFilter', 'SPIDER_MODULES': ['Storelocator.spiders'], 'CONCURRENT_REQUESTS': 32, 'BOT_NAME': 'Storelocator'}
+INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+INFO: Enabled item pipelines:
+['Storelocator.pipelines.StorelocatorPipeline']
+INFO: Spider opened
+WARNING: /usr/lib/python2.7/importlib/__init__.py:37: ScrapyDeprecationWarning: Module `scrapy.dupefilter` is deprecated, use `scrapy.dupefilters` instead
+  __import__(name)
+
+INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+DEBUG: Telnet console listening on 127.0.0.1:6029
+DEBUG: Crawled (200) <GET http://stores.petco.com/robots.txt> (referer: None)
+DEBUG: Crawled (200) <GET http://stores.petco.com/> (referer: None)
+DEBUG: Crawled (200) <GET http://stores.petco.com/il/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/fl/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/hi/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/dc/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/de/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ga/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/id/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/in/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ct/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/co/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ar/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/az/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ak/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/al/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/pr/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/wy/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/wi/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ca/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/tn/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/wv/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ut/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/vt/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/va/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/tx/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/wa/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/sd/> (referer: http://stores.petco.com/)
+INFO: Crawled 28 pages (at 28 pages/min), scraped 0 items (at 0 items/min)
+DEBUG: Crawled (200) <GET http://stores.petco.com/sc/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/or/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ok/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/oh/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nd/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nc/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/pa/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ri/> (referer: http://stores.petco.com/)
+INFO: Scrapy 1.1.1 started (bot: Storelocator)
+INFO: Overridden settings: {'NEWSPIDER_MODULE': 'Storelocator.spiders', 'ROBOTSTXT_OBEY': True, 'DUPEFILTER_CLASS': 'scrapy.dupefilter.BaseDupeFilter', 'SPIDER_MODULES': ['Storelocator.spiders'], 'CONCURRENT_REQUESTS': 32, 'BOT_NAME': 'Storelocator'}
+INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+INFO: Enabled item pipelines:
+['Storelocator.pipelines.StorelocatorPipeline']
+INFO: Spider opened
+WARNING: /usr/lib/python2.7/importlib/__init__.py:37: ScrapyDeprecationWarning: Module `scrapy.dupefilter` is deprecated, use `scrapy.dupefilters` instead
+  __import__(name)
+
+INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+DEBUG: Telnet console listening on 127.0.0.1:6030
+DEBUG: Crawled (200) <GET http://stores.petco.com/robots.txt> (referer: None)
+DEBUG: Crawled (200) <GET http://stores.petco.com/> (referer: None)
+DEBUG: Crawled (200) <GET http://stores.petco.com/vt/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/va/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/tx/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/wi/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ut/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/wy/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/wv/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/wa/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/sc/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/sd/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ri/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/pa/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/tn/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ok/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/or/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/oh/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nd/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nm/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nj/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nh/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ne/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nc/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/mt/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nv/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ny/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ms/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/mo/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/mn/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ma/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/mi/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/la/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/md/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/me/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ky/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ks/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ia/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/in/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ut/westjordan/> (referer: http://stores.petco.com/ut/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/wy/sheridan/> (referer: http://stores.petco.com/wy/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ut/westvalleycity/> (referer: http://stores.petco.com/ut/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/wa/vancouver/> (referer: http://stores.petco.com/wa/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/wa/wallawalla/> (referer: http://stores.petco.com/wa/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/sd/siouxfalls/> (referer: http://stores.petco.com/sd/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/wa/veradale/> (referer: http://stores.petco.com/wa/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/pa/york/> (referer: http://stores.petco.com/pa/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/oh/westerville/> (referer: http://stores.petco.com/oh/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/tn/nashville/> (referer: http://stores.petco.com/tn/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/tn/springhill/> (referer: http://stores.petco.com/tn/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ok/tulsa/> (referer: http://stores.petco.com/ok/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/oh/wooster/> (referer: http://stores.petco.com/oh/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nm/santafe/> (referer: http://stores.petco.com/nm/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nj/westorange/> (referer: http://stores.petco.com/nj/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nh/salem/> (referer: http://stores.petco.com/nh/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nc/sanford/> (referer: http://stores.petco.com/nc/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nc/wilmington/> (referer: http://stores.petco.com/nc/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nc/wakeforest/> (referer: http://stores.petco.com/nc/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ne/omaha/> (referer: http://stores.petco.com/ne/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ms/southaven/> (referer: http://stores.petco.com/ms/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ny/yonkers/> (referer: http://stores.petco.com/ny/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/mo/washington/> (referer: http://stores.petco.com/mo/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/mn/woodbury/> (referer: http://stores.petco.com/mn/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ma/woburn/> (referer: http://stores.petco.com/ma/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ma/westford/> (referer: http://stores.petco.com/ma/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ky/versailles/> (referer: http://stores.petco.com/ky/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/md/waldorf/> (referer: http://stores.petco.com/md/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ma/wellesley/> (referer: http://stores.petco.com/ma/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ky/pikeville/> (referer: http://stores.petco.com/ky/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/md/westminster/> (referer: http://stores.petco.com/md/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/in/speedway/> (referer: http://stores.petco.com/in/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ia/westdesmoines/> (referer: http://stores.petco.com/ia/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/sd/siouxfalls/pet-supplies-siouxfalls-sd-619.html> (referer: http://stores.petco.com/sd/siouxfalls/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/in/merrillville/> (referer: http://stores.petco.com/in/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ut/westjordan/pet-supplies-westjordan-ut-264.html> (referer: http://stores.petco.com/ut/westjordan/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/wy/sheridan/pet-supplies-sheridan-wy-2438.html> (referer: http://stores.petco.com/wy/sheridan/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/wa/wallawalla/pet-supplies-wallawalla-wa-1239.html> (referer: http://stores.petco.com/wa/wallawalla/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/wa/vancouver/pet-supplies-vancouver-wa-1233.html> (referer: http://stores.petco.com/wa/vancouver/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/oh/westerville/pet-supplies-westerville-oh-2823.html> (referer: http://stores.petco.com/oh/westerville/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/wa/vancouver/pet-supplies-vancouver-wa-1222.html> (referer: http://stores.petco.com/wa/vancouver/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/pa/york/pet-supplies-york-pa-2891.html> (referer: http://stores.petco.com/pa/york/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/oh/wooster/pet-supplies-wooster-oh-1953.html> (referer: http://stores.petco.com/oh/wooster/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/pa/york/pet-supplies-york-pa-2814.html> (referer: http://stores.petco.com/pa/york/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/tn/springhill/pet-supplies-springhill-tn-2508.html> (referer: http://stores.petco.com/tn/springhill/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ok/tulsa/pet-supplies-tulsa-ok-1430.html> (referer: http://stores.petco.com/ok/tulsa/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nc/sanford/pet-supplies-sanford-nc-1597.html> (referer: http://stores.petco.com/nc/sanford/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nm/santafe/pet-supplies-santafe-nm-1103.html> (referer: http://stores.petco.com/nm/santafe/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ok/tulsa/pet-supplies-tulsa-ok-1429.html> (referer: http://stores.petco.com/ok/tulsa/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nj/westorange/pet-supplies-westorange-nj-776.html> (referer: http://stores.petco.com/nj/westorange/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nc/wilmington/pet-supplies-wilmington-nc-2726.html> (referer: http://stores.petco.com/nc/wilmington/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ne/omaha/pet-supplies-omaha-ne-646.html> (referer: http://stores.petco.com/ne/omaha/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ny/yonkers/pet-supplies-yonkers-ny-1714.html> (referer: http://stores.petco.com/ny/yonkers/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ms/southaven/pet-supplies-southaven-ms-1601.html> (referer: http://stores.petco.com/ms/southaven/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nc/wakeforest/pet-supplies-wakeforest-nc-1598.html> (referer: http://stores.petco.com/nc/wakeforest/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/mn/woodbury/pet-supplies-woodbury-mn-1650.html> (referer: http://stores.petco.com/mn/woodbury/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ma/woburn/pet-supplies-woburn-ma-1784.html> (referer: http://stores.petco.com/ma/woburn/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/mo/washington/pet-supplies-washington-mo-1682.html> (referer: http://stores.petco.com/mo/washington/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ma/westford/pet-supplies-westford-ma-3745.html> (referer: http://stores.petco.com/ma/westford/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ky/versailles/pet-supplies-versailles-ky-2522.html> (referer: http://stores.petco.com/ky/versailles/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ne/omaha/pet-supplies-omaha-ne-287.html> (referer: http://stores.petco.com/ne/omaha/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ne/omaha/pet-supplies-omaha-ne-1680.html> (referer: http://stores.petco.com/ne/omaha/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nh/salem/pet-supplies-salem-nh-281.html> (referer: http://stores.petco.com/nh/salem/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/in/speedway/pet-supplies-speedway-in-1937.html> (referer: http://stores.petco.com/in/speedway/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ia/westdesmoines/pet-supplies-westdesmoines-ia-1623.html> (referer: http://stores.petco.com/ia/westdesmoines/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/md/westminster/pet-supplies-westminster-md-2867.html> (referer: http://stores.petco.com/md/westminster/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ma/wellesley/pet-supplies-wellesley-ma-5718.html> (referer: http://stores.petco.com/ma/wellesley/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ky/pikeville/pet-supplies-pikeville-ky-1596.html> (referer: http://stores.petco.com/ky/pikeville/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/wa/vancouver/pet-supplies-vancouver-wa-1222.html> (referer: http://stores.petco.com/wa/vancouver/pet-supplies-vancouver-wa-1233.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ut/midvale/pet-supplies-midvale-ut-211.html> (referer: http://stores.petco.com/ut/westjordan/pet-supplies-westjordan-ut-264.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ut/westvalleycity/pet-supplies-westvalleycity-ut-1246.html> (referer: http://stores.petco.com/ut/westjordan/pet-supplies-westjordan-ut-264.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/wa/richland/pet-supplies-richland-wa-1235.html> (referer: http://stores.petco.com/wa/wallawalla/pet-supplies-wallawalla-wa-1239.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/or/portland/pet-supplies-portland-or-1249.html> (referer: http://stores.petco.com/wa/vancouver/pet-supplies-vancouver-wa-1233.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/wa/vancouver/pet-supplies-vancouver-wa-1220.html> (referer: http://stores.petco.com/wa/vancouver/pet-supplies-vancouver-wa-1222.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/oh/strongsville/pet-supplies-strongsville-oh-2803.html> (referer: http://stores.petco.com/oh/wooster/pet-supplies-wooster-oh-1953.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/pa/hanover/pet-supplies-hanover-pa-1712.html> (referer: http://stores.petco.com/pa/york/pet-supplies-york-pa-2891.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/oh/wadsworth/pet-supplies-wadsworth-oh-1977.html> (referer: http://stores.petco.com/oh/wooster/pet-supplies-wooster-oh-1953.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ok/tulsa/pet-supplies-tulsa-ok-1429.html> (referer: http://stores.petco.com/ok/tulsa/pet-supplies-tulsa-ok-1430.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ok/catoosa/pet-supplies-catoosa-ok-2446.html> (referer: http://stores.petco.com/ok/tulsa/pet-supplies-tulsa-ok-1430.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/tn/brentwood/pet-supplies-brentwood-tn-1541.html> (referer: http://stores.petco.com/tn/springhill/pet-supplies-springhill-tn-2508.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ok/tulsa/pet-supplies-tulsa-ok-1430.html> (referer: http://stores.petco.com/ok/tulsa/pet-supplies-tulsa-ok-1430.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ok/catoosa/pet-supplies-catoosa-ok-2446.html> (referer: http://stores.petco.com/ok/tulsa/pet-supplies-tulsa-ok-1429.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nj/verona/pet-supplies-verona-nj-1864.html> (referer: http://stores.petco.com/nj/westorange/pet-supplies-westorange-nj-776.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ok/tulsa/pet-supplies-tulsa-ok-1430.html> (referer: http://stores.petco.com/ok/tulsa/pet-supplies-tulsa-ok-1429.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nj/clifton/pet-supplies-clifton-nj-1865.html> (referer: http://stores.petco.com/nj/westorange/pet-supplies-westorange-nj-776.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nj/westorange/pet-supplies-westorange-nj-776.html> (referer: http://stores.petco.com/nj/westorange/pet-supplies-westorange-nj-776.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ma/burlington/pet-supplies-burlington-ma-1823.html> (referer: http://stores.petco.com/ma/woburn/pet-supplies-woburn-ma-1784.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nc/knightdale/pet-supplies-knightdale-nc-2732.html> (referer: http://stores.petco.com/nc/wakeforest/pet-supplies-wakeforest-nc-1598.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/mn/stillwater/pet-supplies-stillwater-mn-624.html> (referer: http://stores.petco.com/mn/woodbury/pet-supplies-woodbury-mn-1650.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/tn/memphis/pet-supplies-memphis-tn-861.html> (referer: http://stores.petco.com/ms/southaven/pet-supplies-southaven-ms-1601.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ky/versailles/pet-supplies-versailles-ky-2522.html> (referer: http://stores.petco.com/ky/versailles/pet-supplies-versailles-ky-2522.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/mo/stcharles/pet-supplies-stcharles-mo-1605.html> (referer: http://stores.petco.com/mo/washington/pet-supplies-washington-mo-1682.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/mo/dardenneprairie/pet-supplies-dardenneprairie-mo-1677.html> (referer: http://stores.petco.com/mo/washington/pet-supplies-washington-mo-1682.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ky/frankfort/pet-supplies-frankfort-ky-1532.html> (referer: http://stores.petco.com/ky/versailles/pet-supplies-versailles-ky-2522.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nh/nashua/pet-supplies-nashua-nh-743.html> (referer: http://stores.petco.com/ma/westford/pet-supplies-westford-ma-3745.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ma/northandover/pet-supplies-northandover-ma-2775.html> (referer: http://stores.petco.com/nh/salem/pet-supplies-salem-nh-281.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nh/plaistow/pet-supplies-plaistow-nh-3712.html> (referer: http://stores.petco.com/nh/salem/pet-supplies-salem-nh-281.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ia/desmoines/pet-supplies-desmoines-ia-631.html> (referer: http://stores.petco.com/ia/westdesmoines/pet-supplies-westdesmoines-ia-1623.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/wa/vancouver/pet-supplies-vancouver-wa-1220.html> (referer: http://stores.petco.com/wa/vancouver/pet-supplies-vancouver-wa-1222.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/wa/vancouver/pet-supplies-vancouver-wa-1233.html> (referer: http://stores.petco.com/wa/vancouver/pet-supplies-vancouver-wa-1222.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ma/natick/pet-supplies-natick-ma-793.html> (referer: http://stores.petco.com/ma/wellesley/pet-supplies-wellesley-ma-5718.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ia/desmoines/pet-supplies-desmoines-ia-617.html> (referer: http://stores.petco.com/ia/westdesmoines/pet-supplies-westdesmoines-ia-1623.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ut/saltlakecity/pet-supplies-saltlakecity-ut-494.html> (referer: http://stores.petco.com/ut/westvalleycity/pet-supplies-westvalleycity-ut-1246.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ma/needham/pet-supplies-needham-ma-284.html> (referer: http://stores.petco.com/ma/wellesley/pet-supplies-wellesley-ma-5718.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/wa/vancouver/pet-supplies-vancouver-wa-1220.html> (referer: http://stores.petco.com/or/portland/pet-supplies-portland-or-1249.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/wa/vancouver/pet-supplies-vancouver-wa-1222.html> (referer: http://stores.petco.com/wa/vancouver/pet-supplies-vancouver-wa-1220.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ut/westjordan/pet-supplies-westjordan-ut-264.html> (referer: http://stores.petco.com/ut/westvalleycity/pet-supplies-westvalleycity-ut-1246.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ok/tulsa/pet-supplies-tulsa-ok-1429.html> (referer: http://stores.petco.com/ok/tulsa/pet-supplies-tulsa-ok-1429.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/md/westminster/pet-supplies-westminster-md-2867.html> (referer: http://stores.petco.com/pa/hanover/pet-supplies-hanover-pa-1712.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ok/catoosa/pet-supplies-catoosa-ok-2446.html> (referer: http://stores.petco.com/ok/tulsa/pet-supplies-tulsa-ok-1429.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/pa/york/pet-supplies-york-pa-2891.html> (referer: http://stores.petco.com/pa/hanover/pet-supplies-hanover-pa-1712.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/or/portland/pet-supplies-portland-or-1249.html> (referer: http://stores.petco.com/wa/vancouver/pet-supplies-vancouver-wa-1220.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/tn/franklin/pet-supplies-franklin-tn-1544.html> (referer: http://stores.petco.com/tn/brentwood/pet-supplies-brentwood-tn-1541.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ok/tulsa/pet-supplies-tulsa-ok-1430.html> (referer: http://stores.petco.com/ok/catoosa/pet-supplies-catoosa-ok-2446.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ok/tulsa/pet-supplies-tulsa-ok-1429.html> (referer: http://stores.petco.com/ok/catoosa/pet-supplies-catoosa-ok-2446.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/tn/nashville/pet-supplies-nashville-tn-1609.html> (referer: http://stores.petco.com/tn/brentwood/pet-supplies-brentwood-tn-1541.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ok/catoosa/pet-supplies-catoosa-ok-2446.html> (referer: http://stores.petco.com/ok/tulsa/pet-supplies-tulsa-ok-1430.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nj/totowa/pet-supplies-totowa-nj-2794.html> (referer: http://stores.petco.com/nj/clifton/pet-supplies-clifton-nj-1865.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nj/verona/pet-supplies-verona-nj-1864.html> (referer: http://stores.petco.com/nj/clifton/pet-supplies-clifton-nj-1865.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ma/arlington/pet-supplies-arlington-ma-5715.html> (referer: http://stores.petco.com/ma/burlington/pet-supplies-burlington-ma-1823.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ky/frankfort/pet-supplies-frankfort-ky-1532.html> (referer: http://stores.petco.com/ky/versailles/pet-supplies-versailles-ky-2522.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nc/raleigh/pet-supplies-raleigh-nc-2754.html> (referer: http://stores.petco.com/nc/knightdale/pet-supplies-knightdale-nc-2732.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nc/cary/pet-supplies-cary-nc-1535.html> (referer: http://stores.petco.com/nc/knightdale/pet-supplies-knightdale-nc-2732.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/mo/dardenneprairie/pet-supplies-dardenneprairie-mo-1677.html> (referer: http://stores.petco.com/mo/stcharles/pet-supplies-stcharles-mo-1605.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/tn/germantown/pet-supplies-germantown-tn-1617.html> (referer: http://stores.petco.com/tn/memphis/pet-supplies-memphis-tn-861.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/mo/stcharles/pet-supplies-stcharles-mo-1651.html> (referer: http://stores.petco.com/mo/dardenneprairie/pet-supplies-dardenneprairie-mo-1677.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ky/versailles/pet-supplies-versailles-ky-2522.html> (referer: http://stores.petco.com/ky/frankfort/pet-supplies-frankfort-ky-1532.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nh/amherst/pet-supplies-amherst-nh-3709.html> (referer: http://stores.petco.com/nh/nashua/pet-supplies-nashua-nh-743.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nh/plaistow/pet-supplies-plaistow-nh-3712.html> (referer: http://stores.petco.com/ma/northandover/pet-supplies-northandover-ma-2775.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/wa/vancouver/pet-supplies-vancouver-wa-1222.html> (referer: http://stores.petco.com/wa/vancouver/pet-supplies-vancouver-wa-1220.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/wa/vancouver/pet-supplies-vancouver-wa-1222.html> (referer: http://stores.petco.com/wa/vancouver/pet-supplies-vancouver-wa-1233.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/or/portland/pet-supplies-portland-or-1249.html> (referer: http://stores.petco.com/wa/vancouver/pet-supplies-vancouver-wa-1233.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/wa/vancouver/pet-supplies-vancouver-wa-1233.html> (referer: http://stores.petco.com/wa/vancouver/pet-supplies-vancouver-wa-1233.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nh/salem/pet-supplies-salem-nh-281.html> (referer: http://stores.petco.com/ma/northandover/pet-supplies-northandover-ma-2775.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ia/westdesmoines/pet-supplies-westdesmoines-ia-1623.html> (referer: http://stores.petco.com/ia/desmoines/pet-supplies-desmoines-ia-631.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ut/midvale/pet-supplies-midvale-ut-211.html> (referer: http://stores.petco.com/ut/saltlakecity/pet-supplies-saltlakecity-ut-494.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/wa/vancouver/pet-supplies-vancouver-wa-1222.html> (referer: http://stores.petco.com/wa/vancouver/pet-supplies-vancouver-wa-1220.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ut/westjordan/pet-supplies-westjordan-ut-264.html> (referer: http://stores.petco.com/ut/westjordan/pet-supplies-westjordan-ut-264.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/wa/vancouver/pet-supplies-vancouver-wa-1220.html> (referer: http://stores.petco.com/wa/vancouver/pet-supplies-vancouver-wa-1222.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ok/tulsa/pet-supplies-tulsa-ok-1430.html> (referer: http://stores.petco.com/ok/tulsa/pet-supplies-tulsa-ok-1429.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ok/tulsa/pet-supplies-tulsa-ok-1430.html> (referer: http://stores.petco.com/ok/catoosa/pet-supplies-catoosa-ok-2446.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ok/catoosa/pet-supplies-catoosa-ok-2446.html> (referer: http://stores.petco.com/ok/tulsa/pet-supplies-tulsa-ok-1429.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ok/tulsa/pet-supplies-tulsa-ok-1429.html> (referer: http://stores.petco.com/ok/catoosa/pet-supplies-catoosa-ok-2446.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ma/dedham/pet-supplies-dedham-ma-2706.html> (referer: http://stores.petco.com/ma/needham/pet-supplies-needham-ma-284.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/wa/vancouver/pet-supplies-vancouver-wa-1220.html> (referer: http://stores.petco.com/or/portland/pet-supplies-portland-or-1249.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/wa/vancouver/pet-supplies-vancouver-wa-1233.html> (referer: http://stores.petco.com/or/portland/pet-supplies-portland-or-1249.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ok/catoosa/pet-supplies-catoosa-ok-2446.html> (referer: http://stores.petco.com/ok/tulsa/pet-supplies-tulsa-ok-1430.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ok/catoosa/pet-supplies-catoosa-ok-2446.html> (referer: http://stores.petco.com/ok/tulsa/pet-supplies-tulsa-ok-1429.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ok/tulsa/pet-supplies-tulsa-ok-1429.html> (referer: http://stores.petco.com/ok/tulsa/pet-supplies-tulsa-ok-1430.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nj/clifton/pet-supplies-clifton-nj-1865.html> (referer: http://stores.petco.com/nj/totowa/pet-supplies-totowa-nj-2794.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ok/tulsa/pet-supplies-tulsa-ok-1430.html> (referer: http://stores.petco.com/ok/catoosa/pet-supplies-catoosa-ok-2446.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nj/verona/pet-supplies-verona-nj-1864.html> (referer: http://stores.petco.com/nj/totowa/pet-supplies-totowa-nj-2794.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ky/versailles/pet-supplies-versailles-ky-2522.html> (referer: http://stores.petco.com/ky/frankfort/pet-supplies-frankfort-ky-1532.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nc/wakeforest/pet-supplies-wakeforest-nc-1598.html> (referer: http://stores.petco.com/nc/raleigh/pet-supplies-raleigh-nc-2754.html)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ma/waltham/pet-supplies-waltham-ma-755.html> (referer: http://stores.petco.com/ma/arlington/pet-supplies-arlington-ma-5715.html)
+INFO: Scrapy 1.1.1 started (bot: Storelocator)
+INFO: Overridden settings: {'NEWSPIDER_MODULE': 'Storelocator.spiders', 'ROBOTSTXT_OBEY': True, 'DUPEFILTER_CLASS': 'scrapy.dupefilter.BaseDupeFilter', 'SPIDER_MODULES': ['Storelocator.spiders'], 'CONCURRENT_REQUESTS': 32, 'BOT_NAME': 'Storelocator'}
+INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+INFO: Enabled item pipelines:
+['Storelocator.pipelines.StorelocatorPipeline']
+INFO: Spider opened
+WARNING: /usr/lib/python2.7/importlib/__init__.py:37: ScrapyDeprecationWarning: Module `scrapy.dupefilter` is deprecated, use `scrapy.dupefilters` instead
+  __import__(name)
+
+INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+DEBUG: Telnet console listening on 127.0.0.1:6031
+DEBUG: Crawled (200) <GET http://stores.petco.com/robots.txt> (referer: None)
+DEBUG: Crawled (200) <GET http://stores.petco.com/> (referer: None)
+DEBUG: Crawled (200) <GET http://stores.petco.com/wv/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/vt/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/wy/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/wi/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ut/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/va/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/wa/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/pr/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/tx/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/sd/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/tn/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/sc/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/pa/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ok/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ri/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nd/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ny/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/or/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nc/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nm/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nj/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/oh/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nh/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nv/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/mt/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ms/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/mo/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ne/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/mn/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/mi/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ma/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/me/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/md/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/la/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ky/> (referer: http://stores.petco.com/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/wv/triadelphia/> (referer: http://stores.petco.com/wv/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/wy/sheridan/> (referer: http://stores.petco.com/wy/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ut/westjordan/> (referer: http://stores.petco.com/ut/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/wa/wallawalla/> (referer: http://stores.petco.com/wa/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ut/westvalleycity/> (referer: http://stores.petco.com/ut/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/pr/ponce/> (referer: http://stores.petco.com/pr/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/pr/riopiedras/> (referer: http://stores.petco.com/pr/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/pa/york/> (referer: http://stores.petco.com/pa/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/tx/leaguecity/> (referer: http://stores.petco.com/tx/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ok/tulsa/> (referer: http://stores.petco.com/ok/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/tx/woodlands/> (referer: http://stores.petco.com/tx/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/sc/walterboro/> (referer: http://stores.petco.com/sc/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ri/warwick/> (referer: http://stores.petco.com/ri/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ri/providence/> (referer: http://stores.petco.com/ri/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nm/santafe/> (referer: http://stores.petco.com/nm/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ri/middletown/> (referer: http://stores.petco.com/ri/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ri/cranston/> (referer: http://stores.petco.com/ri/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ri/northkingstown/> (referer: http://stores.petco.com/ri/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nj/westorange/> (referer: http://stores.petco.com/nj/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nh/salem/> (referer: http://stores.petco.com/nh/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nh/rochester/> (referer: http://stores.petco.com/nh/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nj/watchung/> (referer: http://stores.petco.com/nj/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nh/portsmouth/> (referer: http://stores.petco.com/nh/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ne/omaha/> (referer: http://stores.petco.com/ne/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nh/plaistow/> (referer: http://stores.petco.com/nh/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/nh/nashua/> (referer: http://stores.petco.com/nh/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/mn/woodbury/> (referer: http://stores.petco.com/mn/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/mi/westland/> (referer: http://stores.petco.com/mi/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ma/westford/> (referer: http://stores.petco.com/ma/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ma/woburn/> (referer: http://stores.petco.com/ma/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/la/slidell/> (referer: http://stores.petco.com/la/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ma/wellesley/> (referer: http://stores.petco.com/ma/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/ut/westjordan/pet-supplies-westjordan-ut-264.html> (referer: http://stores.petco.com/ut/westjordan/)
+DEBUG: Scraped from <200 http://stores.petco.com/ut/westjordan/pet-supplies-westjordan-ut-264.html>
+{'rows': {'BrandID': 'None',
+          'BrandName': 'Petco',
+          'Category': None,
+          'City': 'None',
+          'Country': 'us',
+          'DataSource': 'Petco',
+          'Full_Street': u'6842 S. Redwood Road',
+          'Latitude': 'None',
+          'Longitude': 'None',
+          'PhoneNumber': u'(801) 561-0055',
+          'RawAddress': u'6842 S. Redwood RoadNone84088None',
+          'State': 'None',
+          'StoreName': u'Petco',
+          'Zipcode': u'84088'}}
+DEBUG: Crawled (200) <GET http://stores.petco.com/wy/sheridan/pet-supplies-sheridan-wy-2438.html> (referer: http://stores.petco.com/wy/sheridan/)
+WARNING: /home/deepak/Music/workspace/Storelocator/Storelocator/Storelocator/pipelines.py:45: Warning: Table 'Petco' already exists
+  cur.execute(create_table)
+
+DEBUG: Scraped from <200 http://stores.petco.com/wy/sheridan/pet-supplies-sheridan-wy-2438.html>
+{'rows': {'BrandID': 'None',
+          'BrandName': 'Petco',
+          'Category': None,
+          'City': 'None',
+          'Country': 'us',
+          'DataSource': 'Petco',
+          'Full_Street': u'1820 Sugarland Drive',
+          'Latitude': 'None',
+          'Longitude': 'None',
+          'PhoneNumber': u'(307) 672-1798',
+          'RawAddress': u'1820 Sugarland DriveNone82801None',
+          'State': 'None',
+          'StoreName': u'Petco',
+          'Zipcode': u'82801'}}
+DEBUG: Crawled (200) <GET http://stores.petco.com/wv/triadelphia/pet-supplies-triadelphia-wv-1873.html> (referer: http://stores.petco.com/wv/triadelphia/)
+DEBUG: Crawled (200) <GET http://stores.petco.com/la/shreveport/> (referer: http://stores.petco.com/la/)
+DEBUG: Scraped from <200 http://stores.petco.com/wv/triadelphia/pet-supplies-triadelphia-wv-1873.html>
+{'rows': {'BrandID': 'None',
+          'BrandName': 'Petco',
+          'Category': None,
+          'City': 'None',
+          'Country': 'us',
+          'DataSource': 'Petco',
+          'Full_Street': u'525 Cabela Dr',
+          'Latitude': 'None',
+          'Longitude': 'None',
+          'PhoneNumber': u'(304) 547-0807',
+          'RawAddress': u'525 Cabela DrNone26059None',
+          'State': 'None',
+          'StoreName': u'Petco',
+          'Zipcode': u'26059'}}
+DEBUG: Crawled (200) <GET http://stores.petco.com/ky/versailles/> (referer: http://stores.petco.com/ky/)
