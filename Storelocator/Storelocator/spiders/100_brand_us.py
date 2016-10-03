@@ -42,10 +42,10 @@ class HundredBrand(scrapy.Spider):
 	name = 'hundred'
 	configure_logging(install_root_handler=False)
 	logging.basicConfig(
-    filename='hundred_log.txt',
-    format='%(levelname)s: %(message)s',
-    level=logging.INFO
-    )
+	filename='hundred_log.txt',
+	format='%(levelname)s: %(message)s',
+	level=logging.INFO
+	)
 
 	start_urls =[#"http://www.homedepot.com/StoreFinder/storeDirectory",
 	# "http://www.bk.com/restaurants/sitemap.html",
@@ -60,7 +60,8 @@ class HundredBrand(scrapy.Spider):
 	# "http://www3.hilton.com/en/hotel-locations/us/index.html",
 	# "http://www.albertsons.com/pd/stores/",
 	# "http://www.wholefoodsmarket.com/stores/list/state",
-	"http://stores.petco.com/"
+	# "http://stores.petco.com/",
+	"http://stores.lowes.com/lowes/cgi/region_list?design=default&lang=en&option=&mapid=NorthAmerica"
 	]
 	def parse(self, response):
 		
@@ -120,6 +121,15 @@ class HundredBrand(scrapy.Spider):
 			links = response.xpath('//div[@class="rio-listItem"]/a/@href').extract()
 			for link in links:
 				yield Request(url = link, callback = self.pagination)
+
+
+		elif "lowes.com" in response.url:
+			links = response.xpath('//ul[contains(@class,"multiple_results")]/li/a/@href').extract()
+			print links
+			for link in links:
+				if "country=US" in link:
+ 
+					yield Request(url = link, callback = self.pagination)
 
 		else:
 			yield Request(url = response.url, callback = self.pagination)
@@ -807,6 +817,67 @@ class HundredBrand(scrapy.Spider):
 				yield item
 			except:
 				text_file = open("petco.txt", "w")
+				Failed_url_list =[]
+				Failed_url_list.append(response.url)
+				text_file.write("Failed Url: %s" % Failed_url_list)
+				text_file.close()
+
+
+		elif 'lowes.com' in response.url:
+			time.sleep(random.randint(3,7))
+			try:
+				parent = response.xpath('//div[@id="kwresults_div"]/table/tr[position()>1]')
+				# print parent
+				for par in parent:
+					StoreName ="".join(par.xpath('td[1]/div[2]/h4/text()').extract())
+					print "StoreName",StoreName	
+
+					Full_Street = "".join(par.xpath('td[1]/div[2]/ul/li[2]/text()').extract())
+					print "Full_Street",Full_Street
+					
+					Secondblock = "".join(par.xpath('td[1]/div[2]/ul/li[3]/text()').extract())
+					try:
+						City =  Secondblock.split(',')[0]
+					except:
+						City = "None"
+					try:
+						Zipcode =  Secondblock.split(',')[1].split()[-1]
+					except:
+						Zipcode = "None"
+					try:
+						State =  Secondblock.split(',')[1].split()[0]
+					except:
+						State = "None"
+
+
+					PhoneNumber =  "".join(par.xpath('td[2]/ul/li[1]/text()').extract())
+
+					print "City", City
+					print "State" ,State
+					print "ZIpcode>>",Zipcode
+					print "PhoneNumber>>>",PhoneNumber
+					
+					BrandID = "None"
+					BrandName = 'lowes'
+
+					RawAddress = Full_Street + City + Zipcode + State
+					Country ='us'
+					Latitude = None
+					Longitude = None
+
+					DataSource = BrandName
+					Category = None
+
+					key_list = ["BrandName", "StoreName", "RawAddress", "Full_Street", "City", "State", "Zipcode", "PhoneNumber", "BrandID", "Longitude", "Latitude", "Category", "DataSource", "Country"]
+					item_dict = {}
+					for key in key_list:
+						# print key
+						item_dict[key] = locals()[key]
+						
+					item['rows'] = item_dict
+					yield item
+			except:
+				text_file = open("lowes.txt", "w")
 				Failed_url_list =[]
 				Failed_url_list.append(response.url)
 				text_file.write("Failed Url: %s" % Failed_url_list)

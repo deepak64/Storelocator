@@ -58,16 +58,19 @@ class BusinessStoreClass(scrapy.Spider):
 	# "http://www.homedepot.com/StoreFinder/",
 	# "https://www.mcdonalds.com/us/en-us/restaurant-locator.html",
 	# "https://www.lowes.com/store/",
-	# "https://www.7-eleven.com/locator",
+	"https://www.7-eleven.com/locator",
 	# "https://find.wendys.com/",
 	# "https://www.tacobell.com/locations",
-	"https://www.dollartree.com/custserv/custserv.jsp?pageName=StoreLocations"
+	# "https://www.dollartree.com/custserv/custserv.jsp?pageName=StoreLocations"
+	# "http://www.homedepot.com/StoreFinder/index.jsp",
+	# "https://www.mcdonalds.com/us/en-us/restaurant-locator.html"
 	]
 
 	def __init__(self):
 		# self.display = Display(visible=1, size=(800, 600))
 		# self.display.start()
-		chromedriver = "/home/deepak/Desktop/chromedriver"
+		# chromedriver = "/home/deepak/Music/workspace/Storelocator/AllBusinessStore/AllBusinessStore/chromedriver"
+		chromedriver = os.path.dirname(__file__).replace("/spiders","")+"/chromedriver"
 		os.environ["webdriver.chromedriver"] = chromedriver
 		self.driver = webdriver.Chrome(chromedriver)
 		# self.self.driver = webself.driver.Firefox()
@@ -229,7 +232,7 @@ class BusinessStoreClass(scrapy.Spider):
 				time.sleep(random.randint(7, 11))
 				Full_INFO_Xpaths = self.driver.find_elements_by_xpath(Full_INFO_Xpath)
 				for Full_INFO_Xpath in Full_INFO_Xpaths:
-					print Full_INFO_Xpath.text
+					print "Fullo_>>>>>>>>>>>>>>",Full_INFO_Xpath.text
 					StoreName = Full_INFO_Xpath.text.split('\n')[0]
 					if len(StoreName)<=3:
 						if StoreName.isdigit():
@@ -319,13 +322,13 @@ class BusinessStoreClass(scrapy.Spider):
 							create_table = ('CREATE TABLE if NOT EXISTS ' + str(BrandName) +'  LIKE TestDB;')
 							# print create_table
 							cur.execute(create_table)
-							con.commit()
+							# con.commit()
 
 							''''''''''''''''INSERT into Table by Brand Name'''''''''''''''
 
 							cur.execute('''INSERT IGNORE INTO ''' + str(BrandName)  + ''' values (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)''', final_db) #### Number of coulms input
 							
-							con.commit()
+							# con.commit()
 
 
 
